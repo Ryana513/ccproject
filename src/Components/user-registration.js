@@ -1,74 +1,86 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import submitUser from "../services/user-reg-fireDB";
 
 let UserForm = props => {
-  const { handleSubmit, pristine, reset, submitting } = props
+  const { handleSubmit, pristine, reset, submitting } = props;
   return (
-    <form onSubmit={ handleSubmit }>
+
+    <form onSubmit={handleSubmit(submitUser)}>
     <div>
     <label>User</label>
-    </div>
     <div>
       <label>
+        <Field name="user" component="input" type="radio" value="Job-Candidate"/>
+        {' '}
+        Job-Candidate
+      </label>
+      <label>
+        <Field name="user" component="input" type="radio" value="employer" />
+        {' '}
+        Employer
+      </label>
+    </div>
+  </div>
+      <div>
+        <label>Username</label>
+        <div>
+          <Field
+            name="userName"
+            component="input"
+            type="text"
+            placeholder="User Name"
+          />
+        </div>
+      </div>
+      <div>
+        <label>Email</label>
+        <div>
+          <Field
+            name="email"
+            component="input"
+            type="email"
+            placeholder="Email"
+          />
+        </div>
+      </div>
+      <div>
+      <label>Create Password</label>
+      <div>
         <Field
-          name="user"
+          name="createPassword"
           component="input"
-          type="radio"
-          value="job-candidate"
-          />{' '}
-          Job-Candidate
-       </label>
-       <label>
-        <Field
-          name="user"
-          component="input"
-          type="radio"
-          value="employer"
-          />{' '}
-          Employer
-        </label>
+          type="password"
+          placeholder="Password"
+        />
       </div>
-      <div>
-        <label htmlFor="firstName">First Name</label>
-        <Field name="firstName" component="input" type="text" />
-      </div>
-      <div>
-        <label htmlFor="middleName">Middle Name</label>
-        <Field name="middleName" component="input" type="text" />
-      </div>
-      <div>
-        <label htmlFor="lastName">Last Name</label>
-        <Field name="lastName" component="input" type="text" />
-      </div>
-      <div>
-        <label htmlFor="email">E-mail</label>
-        <Field name="email" component="input" type="text" />
-      </div>
-      <div>
-       <label htmlFor="phone">Phone Number</label>
-       <Field name="phone" component="input" type="text" />
-     </div>
-     <div>
-      <label htmlFor="website">Website</label>
-      <Field name="website" component="input" type="text" />
     </div>
     <div>
-    <button type="submit" disabled={pristine || submitting}>
-      Submit
-    </button>
-    <button type="button" disabled={pristine || submitting} onClick={reset}>
-      Clear Values
-    </button>
+    <label>Confirm Password</label>
+    <div>
+      <Field
+        name="confirmPassword"
+        component="input"
+        type="password"
+        placeholder="Password"
+      />
+    </div>
   </div>
+  <div>{ {"user":"employer"}.checked && <span>Thank you, Jesus!</span> }</div>
+      <div>
+        <button type="submit" disabled={pristine || submitting}>Submit</button>
+        <button type="button" disabled={pristine || submitting} onClick={reset}>
+          Clear Values
+        </button>
+      </div>
     </form>
-  )
-}
-
-
+  );
+};
 
 UserForm = reduxForm({
   // a unique name for the form
-  form: 'userform'
+  form: 'userform',
 })(UserForm);
 
 export {UserForm};
+
