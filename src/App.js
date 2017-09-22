@@ -50,6 +50,7 @@ const App = () => (
 export default App;
 
 
+
 //The coded out code lines 7-51 was coded by drew for testing. -SDG
 
 //
@@ -96,3 +97,16 @@ export default App;
 // }
 //
 // export default App;
+
+export default class App extends Component {
+ 
+  submit = (values) => {
+    console.log(values);
+  }
+  render() {
+    return (
+      <UserForm  />
+    );
+  }
+}
+
