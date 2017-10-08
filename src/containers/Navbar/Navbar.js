@@ -87,6 +87,7 @@ export default class Navbar extends Component {
     )
     const mainMenu = (
       <div className={classes.menu}>
+        <FlatButton label={<a href="#About">About</a>} style={buttonStyle} />
         <Link to={SIGNUP_PATH}>
           <FlatButton label="Sign Up" style={buttonStyle} />
         </Link>

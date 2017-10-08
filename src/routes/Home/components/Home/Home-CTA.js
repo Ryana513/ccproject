@@ -1,6 +1,9 @@
 import React from 'react'
 import RaisedButton from 'material-ui/RaisedButton'
 import FontIcon from 'material-ui/FontIcon'
+import { Link } from 'react-router'
+import { paths } from '../../../../constants'
+import { babyPowder } from 'material-ui/styles/colors'
 
 const styles = {
   button: {
@@ -20,32 +23,42 @@ const styles = {
     margin: 'auto',
     width: '50%',
     padding: 10
+  },
+  divTop: {
+    marginTop: 5
+
   }
 }
 
 const HomeCTA = () => (
-  <div style={styles.div}>
-    <RaisedButton
-      label="Choose an Image"
-      labelPosition="before"
-      style={styles.button}
-      containerElement="label">
-      <input type="file" style={styles.exampleImageInput} />
-    </RaisedButton>
-    <RaisedButton
-      label="Label before"
-      labelPosition="before"
-      primary
-      style={styles.button}
-    />
-    <RaisedButton
-      href="https://github.com/callemall/material-ui"
-      target="_blank"
-      label="Github Link"
-      secondary
-      style={styles.button}
-      icon={<FontIcon className="muidocs-icon-custom-github" />}
-    />
+  <div style={styles.divTop}>
+    <div style={styles.div}>
+      <RaisedButton
+        onClick={paths.login}
+        label={<Link to={paths.login}>Developer Sign-Up</Link>}
+        labelPosition="before"
+        secondary
+        style={styles.button}
+        icon={<FontIcon className="muidocs-icon-custom-github" />}
+      />
+      <RaisedButton
+        onClick={paths.login}
+        label={<Link to={paths.login}>Login</Link>}
+        labelPosition="before"
+        primary
+        style={styles.button}
+        icon={<FontIcon className="muidocs-icon-custom-github" />}
+      />
+      <RaisedButton
+        onClick={paths.login}
+        label={<Link to={paths.login}>Employer Sign-Up</Link>}
+        labelPosition="before"
+        backgroundColor="#D50000"
+        labelColor={babyPowder}
+        style={styles.button}
+        icon={<FontIcon className="muidocs-icon-custom-github" />}
+      />
+    </div>
   </div>
 )
 

@@ -12,17 +12,23 @@ const style = {
   margin: 22,
   textAlign: 'center',
   display: 'inline-block',
-  offset: 1
+  border: '15px solid teal',
+  offset: 1,
+  div: {
+    margin: 'auto',
+    width: '98%',
+    padding: 10
+  }
 }
 const pic = { borderRadius: 85 }
 
 const devPic = img => {
-  return <img style={pic} width={212} height={212} src={img} />
+  return <img style={pic} width={200} height={200} src={img} />
 }
 
 export const HomeDevs = props => {
   return (
-    <div>
+    <div style={style.div}>
       <div className="col s5 pull-s7">
         <Paper style={style} zDepth={5} circle children={devPic(ryanW)} />
         <Paper style={style} zDepth={5} circle children={devPic(ryanj)} />
