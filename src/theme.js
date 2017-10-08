@@ -1,12 +1,12 @@
 import {
-  blueGrey100,
-  blueGrey500,
-  blueGrey700,
-  pinkA200,
-  tealA100,
+  indigo800,
+  indigo900,
+  indigo700,
+  blueSapphire,
+  metallicSeaweed,
   lightBlue500,
   grey900,
-  white,
+  babyPowder,
   grey400,
   darkBlack
 } from 'material-ui/styles/colors'
@@ -19,17 +19,17 @@ export default {
   zIndex: zIndex,
   fontFamily: 'Roboto, sans-serif',
   palette: {
-    primary1Color: blueGrey500,
-    primary2Color: blueGrey700,
-    primary3Color: blueGrey100,
-    accent1Color: pinkA200,
-    accent2Color: tealA100,
+    primary1Color: darkBlack,
+    primary2Color: indigo800,
+    primary3Color: indigo700,
+    accent1Color: blueSapphire,
+    accent2Color: metallicSeaweed,
     accent3Color: lightBlue500,
     textColor: grey900,
-    alternateTextColor: white,
-    canvasColor: white,
+    alternateTextColor: babyPowder,
+    canvasColor: babyPowder,
     borderColor: grey400,
     disabledColor: fade(darkBlack, 0.3),
-    pickerHeaderColor: pinkA200
+    pickerHeaderColor: blueSapphire
   }
 }

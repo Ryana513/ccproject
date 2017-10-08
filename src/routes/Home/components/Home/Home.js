@@ -1,10 +1,10 @@
 import React from 'react'
-import Theme from '../../../../theme'
 import HomeMain from './Home-Main'
 import HomeFooter from './Home-Footer'
-import HomePara from './Home-Parallax'
+import HomeAbout from './Home-About'
 import HomeDevs from './Home-Devs'
 import HomeBack from './Home-Back'
+import HomeCTA from './Home-CTA'
 // import { Link } from 'react-router';
 // import { paths } from '../../../../constants';
 // import classes from './Home.scss';
@@ -13,8 +13,11 @@ import HomeBack from './Home-Back'
 export const Home = () => {
   return (
     <div>
+      <HomeMain />
+      <HomeCTA />
+      <HomeAbout />
+      <HomeDevs />
       <HomeBack />
-      
       <HomeFooter />
     </div>
   )

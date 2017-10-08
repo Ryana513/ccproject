@@ -1,29 +1,36 @@
-import React from 'react';
-import Theme from '../../../../theme';
-// import {Card, CardTitle, CardPanel, Row, Col} from 'react-materialize';
+import React from 'react'
+import Paper from 'material-ui/Paper'
+import ryanj from '../../assets/ryanj.jpg'
+import drew from '../../assets/drew.jpg'
+import sdg from '../../assets/sdg.jpg'
+import ryanW from '../../assets/ryanW.jpg'
+// import { BrowserRouter as NavLink } from "react-router-dom";
 
 const style = {
-	margin: 80,
-	textAlign: 'center',
-	display: 'block',
-	
-	
-  };
+  height: 212,
+  width: 212,
+  margin: 22,
+  textAlign: 'center',
+  display: 'inline-block',
+  offset: 1
+}
+const pic = { borderRadius: 85 }
 
+const devPic = img => {
+  return <img style={pic} width={212} height={212} src={img} />
+}
 
-export const HomeDevs = () => {
+export const HomeDevs = props => {
   return (
- 
-<div style={style}>
-<h5>About "Get Me A Job"</h5>
-<p>This app was created by a group of Coder Camps graduates.Will update later...thinking of cool stuff to stay like Lorem Epsom
-This app was created by a group of Coder Camps graduates.Will update later...thinking of cool stuff to stay like Lorem Epsom
-Beyonce Puccini Obama.This app was created by a group of Coder Camps graduates.Will update later...thinking of cool stuff to stay like Lorem Epsom
-This app was created by a group of Coder Camps graduates.Will update later...thinking of cool stuff to stay like Lorem Epsom
-Beyonce Puccini Obama</p>
-</div>
-  
+    <div>
+      <div className="col s5 pull-s7">
+        <Paper style={style} zDepth={5} circle children={devPic(ryanW)} />
+        <Paper style={style} zDepth={5} circle children={devPic(ryanj)} />
+        <Paper style={style} zDepth={5} circle children={devPic(sdg)} />
+        <Paper style={style} zDepth={5} circle children={devPic(drew)} />
+      </div>
+    </div>
+  )
+}
 
-  )};
-   
-export default HomeDevs;
+export default HomeDevs

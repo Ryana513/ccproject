@@ -1,7 +1,7 @@
 import React from 'react'
 import { Slider, Slide } from 'react-materialize'
 import compCoff from '../../../../img/comp_coff.jpg'
-import tech from '../../assets/tech.png'
+import tech from '../../assets/slide2tech-100.jpg'
 import hero from '../../assets/bg-home-technologies.jpg'
 
 // import { BrowserRouter as NavLink } from "react-router-dom";
