@@ -129,5 +129,9 @@ export default class Signup extends Component {
   }
 }
 function newFunction(createUser, creds) {
-  return createUser(creds, { email: creds.email, username: creds.username })
+  return createUser(creds, {
+    email: creds.email,
+    username: creds.username,
+    userType: creds.userType
+  })
 }
