@@ -11,18 +11,9 @@ import { SIGNUP_FORM_NAME } from '../../../../constants'
 import { required, validateEmail } from '../../../../utils/form'
 import classes from './SignupForm.scss'
 
-const renderRadioGroup = ({ input, ...rest }) => (
-  <RadioButtonGroup
-    {...input}
-    {...rest}
-    valueSelected={input.value}
-    onChange={(event, value) => input.onChange(value)}
-  />
-)
-
 const SignupForm = ({ pristine, submitting, handleSubmit }) => (
   <form className={classes.container} onSubmit={handleSubmit}>
-    <Field name="userType" component={renderRadioGroup}>
+    <Field name="userType" component="input">
       <RadioButton value="developer" label="Developer" />
       <RadioButton value="employer" label="Employer" />
     </Field>
