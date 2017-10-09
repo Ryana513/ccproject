@@ -7,8 +7,13 @@ export const HomeFooter = props => {
     <div className="black">
       <Footer
         className="black center-block"
-        copyrights={'\u00A9  2017 GET Me A Job'}
-      />
+        copyrights={'\u00A9  2017 GET Me A Job'}>
+        <h5 className="white-text">GET Me A Job</h5>
+        <p className="grey-text text-lighten-4">
+          Here lies stuff about theis app, and more stuff...maybe some links and
+          such.
+        </p>
+      </Footer>
     </div>
   )
 }

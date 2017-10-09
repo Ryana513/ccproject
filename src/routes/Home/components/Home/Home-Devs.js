@@ -4,6 +4,7 @@ import ryanj from '../../assets/ryanj.jpg'
 import drew from '../../assets/drew.jpg'
 import sdg from '../../assets/sdg.jpg'
 import ryanW from '../../assets/ryanW.jpg'
+import bghero from '../../assets/bg-hero-online.jpg'
 // import { BrowserRouter as NavLink } from "react-router-dom";
 
 const style = {
@@ -17,7 +18,8 @@ const style = {
   div: {
     margin: 'auto',
     width: '98%',
-    padding: 10
+    padding: 10,
+    backgroundImage: "url('../../assets/bg-hero-online.jpg')"
   }
 }
 const pic = { borderRadius: 85 }
