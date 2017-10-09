@@ -37,7 +37,9 @@ component as well as a <WorkExp /> and <Education />*/
             </Paper>
 
             <Paper className={classes.pane} >
-
+              <h2>Work Expierence</h2>
+              <p>Jobtitle / Company</p>
+              <p>Date Employed</p>
               <p>Job Description:</p>
             </Paper>
 
