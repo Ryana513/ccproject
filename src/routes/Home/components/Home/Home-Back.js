@@ -1,22 +1,69 @@
 import React from 'react'
 import { Parallax } from 'react-materialize'
+import assign from '../../assets/ic_assignment_black_48px.svg'
+import gears from '../../assets/videogears.mov'
+
+const style = {
+  mainDiv: {},
+  headerMD: {
+    margin: 'auto',
+    width: '15%',
+    padding: 10
+  },
+  secHeader: {},
+  image: {}
+}
 
 export const HomeBack = () => {
   return (
     <div>
-      <div style={{ zIndex: 4 }}>
-        <Parallax imageSrc="http://materializecss.com/images/parallax1.jpg" />
-        <div className="section white">
-          <div className="row container">
-            <h2 className="header">Parallax</h2>
-            <p className="grey-text text-darken-3 lighten-3">
-              Parallax is an effect where the background content or image in
-              this case, is moved at a different speed than the foreground
-              content while scrolling.
-            </p>
-          </div>
+      <video playsinline autoPlay muted loop poster="polina.jpg" id="bgvid">
+        <source src={gears} type="video/mp4" />
+      </video>
+      <h5 style={style.headerMD}>How it Works</h5>
+      <div className="row">
+        <div className="col s4">
+          <img src={assign} />
+          <h1>Search Developers</h1>
+          <p>
+            Login to search the developer database. Find the developer with the
+            skills to best suit your needs.Login to search the developer
+            database. Find the developer with the skills to best suit your
+            needs.Login to search the developer database. Find the developer
+            with the skills to best suit your needs.Login to search the
+            developer database. Find the developer with the skills to best suit
+            your needs.Login to search the developer database. Find the
+            developer with the skills to best suit your needs.
+          </p>
         </div>
-        <Parallax imageSrc="http://materializecss.com/images/parallax2.jpg" />
+        <div className="col s4">
+          <img src={assign} />
+          <h1>Search Developers</h1>
+          <p>
+            Login to search the developer database. Find the developer with the
+            skills to best suit your needs.Login to search the developer
+            database. Find the developer with the skills to best suit your
+            needs.Login to search the developer database. Find the developer
+            with the skills to best suit your needs.Login to search the
+            developer database. Find the developer with the skills to best suit
+            your needs.Login to search the developer database. Find the
+            developer with the skills to best suit your needs.
+          </p>
+        </div>
+        <div className="col s4">
+          <img src={assign} />
+          <h1>Search Developers</h1>
+          <p>
+            Login to search the developer database. Find the developer with the
+            skills to best suit your needs.Login to search the developer
+            database. Find the developer with the skills to best suit your
+            needs.Login to search the developer database. Find the developer
+            with the skills to best suit your needs.Login to search the
+            developer database. Find the developer with the skills to best suit
+            your needs.Login to search the developer database. Find the
+            developer with the skills to best suit your needs.
+          </p>
+        </div>
       </div>
     </div>
   )

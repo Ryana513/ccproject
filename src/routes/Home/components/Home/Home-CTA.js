@@ -56,6 +56,7 @@ const HomeCTA = () => (
         backgroundColor="#D50000"
         labelColor={babyPowder}
         style={styles.button}
+        pulse
         icon={<FontIcon className="muidocs-icon-custom-github" />}
       />
     </div>
