@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Paper from 'material-ui/Paper';
@@ -9,7 +10,8 @@ import defaultUserImageUrl from '../../../static/User.png';
 import LoadingSpinner from '../../../Components/LoadingSpinner';
 import AccountForm from '../components/AccountForm';
 import classes from './AccountContainer.scss';
-@UserIsAuthenticated // redirect to /login if user is not authenticated
+
+@UserIsAuthenticated // redirect to /login if user is not authenticated meta
 @firebaseConnect()
 @connect(({ firebase }) => ({
     auth: pathToJS(firebase, 'auth'),
