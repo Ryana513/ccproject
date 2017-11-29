@@ -1,3 +1,3 @@
-import DevDrawer from './DevDrawer';
+import DevDrawer from './DevDrawer'
 
-export default DevDrawer;
+export default DevDrawer
